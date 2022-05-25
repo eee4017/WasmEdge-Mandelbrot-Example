@@ -25,7 +25,9 @@ bash test.bash
 ## Results
 
 The results were tested on `Intel(R) Xeon(R) Gold 6226R CPU` and `node v14.18.2`.
-This shows that single-threaded WasmEdge Runtime outperforms NodeJS runtime by 1.27x and has better thread scalability.
+This experiment shows:
+1. single-threaded WasmEdge Runtime outperforms NodeJS runtime by 1.27x 
+2. Multi-threaded WasmEdge has better thread scalability compared with multi-worker NodeJS
 
 **Elapsed Time (ms)**
 | Number of threads | WasmEdge |    NodeJS   |
@@ -41,16 +43,16 @@ This shows that single-threaded WasmEdge Runtime outperforms NodeJS runtime by 1
 |         9         |  89.2532 | 168.5531969 |
 |         10        |  86.9667 | 162.1774654 |
 
-**Speedup**
-![Speedup](./Speedup.png)
 
-**Thread Scalability**
-![Thread Scalability](./Thread Scalability.png)
+![Speedup](./Speedup.png)
+![Thread Scalability](./Thread%20Scalability.png)
+
 
 ### Images
 
 **output-node.png**
 ![node](./output-node.png)
+
 
 **output-wasmedge.png**
 ![wasmedge](./output-wasmedge.png)
